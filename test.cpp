@@ -5,10 +5,9 @@ using namespace std;
 
 int main(){
 
-    cout << "helo" << endl;
+    cout << "helo" << endl << endl;
 
     Node* head = newList(13);
-    cout << head->value << endl;
 
     newNode(head, 15);
     newNode(head, 12);
@@ -18,6 +17,8 @@ int main(){
     newNode(head, 1);
     newNode(head, 32);
     newNode(head, 22);
+
+    cout << head->value << endl;
 
     printList(head);
 
