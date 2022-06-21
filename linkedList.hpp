@@ -15,9 +15,9 @@ Node* newList(int val){
     return temp;
 }
 
-void insertionNode(Node *head, Node *newone){
+void insertionNode(Node ***head, Node *newone){
     cout << "manga1" << endl;
-    for(Node *i=head; ; i=i->next){
+    for(Node ****i=&head; ; i=(***i)->next){
         cout << i->value << " ------ " << newone->value << endl;
         if(i->value >= newone->value){
             cout << "manga2 = " << newone->value << endl;
@@ -27,18 +27,18 @@ void insertionNode(Node *head, Node *newone){
             newone = aux;
             return;                
         }else if(i->next == nullptr){
-            cout << "manga3 = " << endl;
+            cout << "manga3" << endl;
             i->next = newone;
             return;
         }else{
-            cout << "manga4 = " << endl;
+            cout << "manga4" << endl;
             continue;
         }        
     }
 }
 
-void newNode(Node *head, int val){
-   cout << head->value << endl << "-------------------" << endl; 
+void newNode(Node **head, int val){
+   cout << (*head)->value << endl << "-------------------" << endl; 
    Node *nnode = (Node*)malloc(sizeof(Node));
    nnode->next = nullptr;
    nnode->value = val;
@@ -46,7 +46,7 @@ void newNode(Node *head, int val){
    
    //Insertion on the Linked List (linking to head);
    //cout << head->value << " ------ " << temp->value << endl;
-   insertionNode(head, temp);
+   insertionNode(&head, temp);
 
 }
 
