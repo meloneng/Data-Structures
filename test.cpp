@@ -1,26 +1,36 @@
 #include <bits/stdc++.h>
-#include "linkedList.hpp"
+#include "./LinkedList/linkedList.hpp"
 
 using namespace std;
+
+typedef struct coisa{
+    int manga;
+    char baga;
+}coisa;
+
+coisa* funcl(){
+    coisa* gur = (coisa*) malloc(sizeof(coisa));
+    gur->manga = 12;
+    gur->baga = 'c';
+    cout << gur << endl;
+    cout << &gur << endl;
+    cout << gur->manga << endl;
+    cout << gur->baga << endl;
+    return gur;
+}
 
 int main(){
 
     cout << "helo" << endl << endl;
 
-    Node* head = newList(13);
-
-    newNode(&head, 15);
-    newNode(&head, 12);
-    newNode(&head, 17);
-    newNode(&head, 22);
-    newNode(&head, 30);
-    newNode(&head, 1);
-    newNode(&head, 32);
-    newNode(&head, 22);
-
-    cout << head->value << endl;
-
-    printList(head);
+    coisa* nada = nullptr;
+    coisa* gur = funcl();
+    
+    cout << "main" << endl;
+    cout << gur << endl;
+    cout << &gur << endl;
+    cout << gur->manga << endl;
+    cout << gur->baga << endl;
 
     return 0;
 }

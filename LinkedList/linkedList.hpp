@@ -21,13 +21,19 @@ Llist* newList(){
 Node* newNode(int data){
     Node* newnode = (Node*) malloc(sizeof(Node));
     newnode->next = nullptr;
-    newnode->value = NULL;
+    newnode->value = -1;
     return newnode;
 }
 
 
 void newNode(Llist** list, int value){
-    if((list->head) == nullptr){
+    if(((*list)->head) == nullptr){
+        Node *newone = newNode(value);
+        (*list)->head = newone;
+    }
+    else if((*list)->head->value < value){
+        for(Node *i=(*list)->head->next;;i=i->next){
 
+        }
     }
 }
