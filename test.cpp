@@ -3,34 +3,24 @@
 
 using namespace std;
 
-typedef struct coisa{
-    int manga;
-    char baga;
-}coisa;
-
-coisa* funcl(){
-    coisa* gur = (coisa*) malloc(sizeof(coisa));
-    gur->manga = 12;
-    gur->baga = 'c';
-    cout << gur << endl;
-    cout << &gur << endl;
-    cout << gur->manga << endl;
-    cout << gur->baga << endl;
-    return gur;
-}
 
 int main(){
 
     cout << "helo" << endl << endl;
 
-    coisa* nada = nullptr;
-    coisa* gur = funcl();
-    
-    cout << "main" << endl;
-    cout << gur << endl;
-    cout << &gur << endl;
-    cout << gur->manga << endl;
-    cout << gur->baga << endl;
+    Llist* list = newList();
+
+    insertNode(&list, 20);
+    insertNode(&list, 30);
+    insertNode(&list, 40);
+    insertNode(&list, 10);
+    insertNode(&list, 1);
+    insertNode(&list, 133);
+    insertNode(&list, 20);
+    insertNode(&list, 15);
+    insertNode(&list, 34);
+
+    printList(&list);
 
     return 0;
 }
