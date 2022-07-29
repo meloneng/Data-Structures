@@ -4,10 +4,8 @@
 using namespace std;
 
 
-int main(){
-
-    cout << "helo" << endl << endl;
-
+void testLinkedList(){
+    
     Llist* list = newList();
 
     insertNode(&list, 20);
@@ -21,6 +19,15 @@ int main(){
     insertNode(&list, 34);
 
     printList(&list);
+}
+
+
+int main(){
+
+    cout << "helo" << endl << endl;
+
+    testLinkedList();
+       
 
     return 0;
 }
