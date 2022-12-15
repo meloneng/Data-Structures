@@ -1,0 +1,9 @@
+Stack
+Queue
+Circular list
+Deque
+Hash Table
+Tree
+Heap
+Graph
+
