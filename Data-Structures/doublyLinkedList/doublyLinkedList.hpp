@@ -9,7 +9,7 @@ typedef struct Node{
 
 typedef struct List{
     Node *head;
-    int listLength
+    int listLength;
 } Llist;
 
 Llist* newList(){

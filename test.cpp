@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include "./LinkedList/linkedList.hpp"
+#include "./Data-Structures/LinkedList/linkedList.hpp"
 
 using namespace std;
 
