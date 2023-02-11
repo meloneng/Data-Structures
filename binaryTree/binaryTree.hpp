@@ -13,8 +13,8 @@ typedef struct Tree{
 
 Tree* newTree(){
     Tree *nTree = (Tree*) malloc(sizeof(Tree));
-    nTree->left = nullptr;
-    nTree->right = nullptr;
+    nTree->Root->left = nullptr;
+    nTree->Root->right = nullptr;
     return nTree;
 }
 
